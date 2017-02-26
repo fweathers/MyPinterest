@@ -14,9 +14,13 @@
 		B69DD9251E635AB90072D118 /* MyPinterest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69DD9231E635AB90072D118 /* MyPinterest.xcdatamodeld */; };
 		B69DD9271E635AB90072D118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69DD9261E635AB90072D118 /* Assets.xcassets */; };
 		B69DD92A1E635AB90072D118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69DD9281E635AB90072D118 /* LaunchScreen.storyboard */; };
+		F2E696C7CE60D945E92F21B8 /* libPods-MyPinterest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072FD27CA2D2828995335640 /* libPods-MyPinterest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		072FD27CA2D2828995335640 /* libPods-MyPinterest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPinterest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FCA1672436AEBCC17CE2E5 /* Pods-MyPinterest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPinterest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPinterest/Pods-MyPinterest.debug.xcconfig"; sourceTree = "<group>"; };
+		42E15F8C307B4DC9AA8791DB /* Pods-MyPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPinterest/Pods-MyPinterest.release.xcconfig"; sourceTree = "<group>"; };
 		B69DD9141E635AB90072D118 /* MyPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69DD9181E635AB90072D118 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B69DD91A1E635AB90072D118 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E696C7CE60D945E92F21B8 /* libPods-MyPinterest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38B87C01BE231E07B2BE82BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				072FD27CA2D2828995335640 /* libPods-MyPinterest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B69DD90B1E635AB90072D118 = {
 			isa = PBXGroup;
 			children = (
 				B69DD9161E635AB90072D118 /* MyPinterest */,
 				B69DD9151E635AB90072D118 /* Products */,
+				D87EE1282325070BC112B6F3 /* Pods */,
+				38B87C01BE231E07B2BE82BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +97,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D87EE1282325070BC112B6F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38FCA1672436AEBCC17CE2E5 /* Pods-MyPinterest.debug.xcconfig */,
+				42E15F8C307B4DC9AA8791DB /* Pods-MyPinterest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69DD92E1E635AB90072D118 /* Build configuration list for PBXNativeTarget "MyPinterest" */;
 			buildPhases = (
+				7876B7CA56C5566EB6A1989C /* [CP] Check Pods Manifest.lock */,
 				B69DD9101E635AB90072D118 /* Sources */,
 				B69DD9111E635AB90072D118 /* Frameworks */,
 				B69DD9121E635AB90072D118 /* Resources */,
+				21FFE2521A9F8787364947BC /* [CP] Embed Pods Frameworks */,
+				C0F2994FBC966671FF188E7C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21FFE2521A9F8787364947BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPinterest/Pods-MyPinterest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7876B7CA56C5566EB6A1989C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F2994FBC966671FF188E7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPinterest/Pods-MyPinterest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B69DD9101E635AB90072D118 /* Sources */ = {
@@ -275,6 +350,7 @@
 		};
 		B69DD92F1E635AB90072D118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38FCA1672436AEBCC17CE2E5 /* Pods-MyPinterest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9V5VY2T8PQ;
@@ -287,6 +363,7 @@
 		};
 		B69DD9301E635AB90072D118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E15F8C307B4DC9AA8791DB /* Pods-MyPinterest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9V5VY2T8PQ;
