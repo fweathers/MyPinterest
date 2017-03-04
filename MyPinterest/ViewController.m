@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "PDKClient.h"
+
 
 @interface ViewController ()
+
+@property (nonatomic, strong) PDKUser *user;
 
 @end
 
@@ -16,7 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [[PDKClient sharedInstance] authenticateWithPermissions:[NSArray arrayWithObjects:PDKClientReadPublicPermissions, nil] withSuccess:^(PDKResponseObject *responseObject) {
+        
+        NSLog(@"Response Object:%@",responseObject);
+        
+    } andFailure:^(NSError *error) {
+        
+        NSLog(@"Error:%@",error);
+    }];
+    
 }
 
 
